@@ -225,6 +225,59 @@ footer p{max-width:44rem;margin-top:1rem}
 }
 @media(max-width:520px){.hi h1 b{font-size:clamp(3rem,17vw,5rem)}.kp,.cf{grid-template-columns:1fr}.hud .mo.h{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}.hi h1 b{clip-path:none}.hi .a{opacity:1}}
+
+/* development archive — scoped to #devcal */
+#devcal{margin:4rem auto 0;padding-top:2.5rem;border-top:1px solid var(--l)}
+#devcal .dc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+#devcal .dc-title{font:800 clamp(2rem,5vw,4.2rem)/.95 var(--f);letter-spacing:-.045em;text-transform:uppercase;margin-top:.8rem}
+#devcal .dc-sub{max-width:32rem;color:#a9afb7;margin-top:1rem}
+#devcal .dc-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:1rem;margin-top:2rem}
+#devcal .dc-panel{border:1px solid var(--l);background:linear-gradient(var(--g),#0a0b0d);min-width:0}
+#devcal .dc-panel-head{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:1rem 1.1rem;border-bottom:1px solid var(--l)}
+#devcal .dc-month{font:500 .8rem var(--mo);letter-spacing:.12em;text-transform:uppercase}
+#devcal .dc-month-nav{display:flex;gap:.4rem}
+#devcal .dc-iconbtn{border:1px solid var(--l);background:var(--g2);width:2rem;height:2rem;cursor:pointer}
+#devcal .dc-week,#devcal .dc-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;padding:.8rem}
+#devcal .dc-week{padding-bottom:0;color:var(--m);font:500 .62rem var(--mo);text-align:center}
+#devcal .dc-date{min-height:64px;border:1px solid transparent;background:#111317;color:var(--m);padding:.45rem;text-align:left;cursor:pointer;position:relative;transition:border-color .2s,background .2s}
+#devcal .dc-date:hover,#devcal .dc-date:focus-visible{border-color:var(--r);color:var(--t)}
+#devcal .dc-date.has{color:var(--t);background:#17191d}
+#devcal .dc-date.selected{border-color:var(--r);background:#210d12;color:#fff}
+#devcal .dc-date .num{font:500 .75rem var(--mo)}
+#devcal .dc-date .mark{position:absolute;right:.4rem;bottom:.35rem;width:5px;height:5px;border-radius:50%;background:var(--r)}
+#devcal .dc-date .vcount{display:block;margin-top:.4rem;color:#a9afb7;font:500 .55rem var(--mo)}
+#devcal .dc-date.outside{opacity:.28;cursor:default}
+#devcal .dc-day{padding:1.25rem}
+#devcal .dc-day h3{font:800 clamp(1.5rem,3vw,2.2rem)/1 var(--f);letter-spacing:-.03em;text-transform:uppercase;margin:.6rem 0}
+#devcal .dc-day ul{list-style:none;margin-top:1rem}
+#devcal .dc-day li{position:relative;padding:.62rem 0 .62rem 1rem;border-bottom:1px solid var(--l);color:#b6bbc2;font-size:.92rem}
+#devcal .dc-day li:before{content:"";position:absolute;left:0;top:1.25rem;width:4px;height:4px;background:var(--r)}
+#devcal .dc-milestone{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(229,23,63,.55);padding:.45rem .6rem;margin-top:1rem;color:var(--t);font:500 .62rem var(--mo);letter-spacing:.06em;text-transform:uppercase}
+#devcal .dc-future{color:var(--m);font:500 .62rem var(--mo);margin-top:.8rem}
+#devcal .dc-evo{margin-top:2rem}
+#devcal .dc-evo-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+#devcal .dc-evo-title{font:800 clamp(1.8rem,4vw,3rem)/1 var(--f);letter-spacing:-.04em;text-transform:uppercase}
+#devcal .dc-strip{display:flex;gap:.55rem;overflow-x:auto;padding:.4rem .1rem 1rem;scrollbar-width:thin;scrollbar-color:#333 transparent}
+#devcal .dc-version{flex:0 0 150px;min-height:108px;text-align:left;background:var(--g);border:1px solid var(--l);padding:.85rem;cursor:pointer;transition:border-color .2s,background .2s}
+#devcal .dc-version:hover,#devcal .dc-version.selected{border-color:var(--r);background:#1b0d11}
+#devcal .dc-version strong{display:block;font:800 1.5rem var(--f);letter-spacing:-.04em}
+#devcal .dc-version span{display:block;color:var(--m);font:500 .62rem var(--mo);margin-top:.35rem}
+#devcal .dc-version small{display:block;color:#b6bbc2;font-size:.78rem;line-height:1.35;margin-top:.6rem}
+#devcal .dc-detail{border:1px solid var(--l);background:linear-gradient(110deg,#15171b,#0a0b0d);padding:1.2rem;margin-top:.7rem;display:grid;grid-template-columns:150px 1fr;gap:1.2rem}
+#devcal .dc-detail h4{font:800 1.8rem var(--f);text-transform:uppercase}
+#devcal .dc-detail p{color:#b6bbc2;font-size:.9rem}
+#devcal .dc-detail ul{list-style:none;margin-top:.5rem}
+#devcal .dc-detail li{padding:.3rem 0;color:#b6bbc2;font-size:.88rem}
+#devcal .dc-detail li:before{content:"— ";color:var(--r)}
+#devcal .dc-milestones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border:1px solid var(--l);background:var(--l);margin-top:2rem}
+#devcal .dc-ms{background:var(--g);padding:1rem;cursor:pointer;text-align:left;border:0;min-width:0}
+#devcal .dc-ms:hover{background:#191115}
+#devcal .dc-ms time{display:block;color:var(--r);font:500 .65rem var(--mo);letter-spacing:.08em}
+#devcal .dc-ms strong{display:block;margin-top:.45rem;font-size:.9rem}
+#devcal .dc-ms span{display:block;color:var(--m);font-size:.8rem;margin-top:.25rem}
+@media(max-width:900px){#devcal .dc-top{grid-template-columns:1fr}#devcal .dc-milestones{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){#devcal .dc-date{min-height:49px;padding:.3rem}#devcal .dc-date .vcount{font-size:.48rem}#devcal .dc-grid{gap:2px;padding:.45rem}#devcal .dc-week{padding:.5rem .45rem 0;font-size:.55rem}#devcal .dc-detail{grid-template-columns:1fr;gap:.5rem}#devcal .dc-milestones{grid-template-columns:1fr}#devcal .dc-day{padding:1rem}}
+
 </style>
 </head>
 <body class="lock">
@@ -334,7 +387,7 @@ footer p{max-width:44rem;margin-top:1rem}
 <section class="sec" id="econ"><div class="wrap">
 <span class="mo tag">SYS / 09 &nbsp; Base node</span>
 <h2 class="rv">One node.<br><em>One price.</em></h2>
-<div class="rv pr" id="ec"><span class="mo r">Base node</span><b data-n="3499" data-p="₹">₹3,499</b><span class="mo">Per unit &middot; proposed</span><p class="lead">Base communication node.</p></div></div></section>
+<div class="rv pr" id="ec"><span class="mo r">Base node</span><b data-n="1600" data-p="₹">₹1,600</b><span class="mo">Per unit &middot; proposed</span><p class="lead">Base communication node.</p></div></div></section>
 
 <section class="sec"><div class="wrap">
 <span class="mo tag">SYS / 10 &nbsp; Modular business</span>
@@ -349,13 +402,37 @@ footer p{max-width:44rem;margin-top:1rem}
 <article><span class="mo">Next</span><h3>Refinement</h3><ul><li>Custom PCB</li><li>Integrated power</li></ul></article>
 <article><span class="mo">Then</span><h3>Productization</h3><ul><li>Purpose-built enclosure</li><li>Improved interface</li></ul></article>
 <article><span class="mo">Then</span><h3>Specialization</h3><ul><li>Rescue</li><li>Industrial</li><li>Expedition</li></ul></article>
-<article><span class="mo">Future</span><h3>Exploration</h3><ul><li>Long-range</li><li>Audio / PTT</li><li>Sensors</li><li>Mapping</li><li>Security</li><li>Network management</li></ul></article></div></section>
+<article><span class="mo">Future</span><h3>Exploration</h3><ul><li>Long-range</li><li>Audio / PTT</li><li>Sensors</li><li>Mapping</li><li>Security</li><li>Network management</li></ul></article></div>
+<div id="devcal" aria-label="Spyder Web development calendar">
+  <div class="dc-head">
+    <div><span class="mo tag r">SYS / 12 &nbsp; Development archive</span><h3 class="dc-title">Build log.<br><span class="r">Day by day.</span></h3><p class="dc-sub">A dated record of Spyder Web research, software evolution, hardware integration and exhibition preparation.</p></div>
+    <div class="mo">15 OCT — 02 NOV 2026</div>
+  </div>
+  <div class="dc-top">
+    <div class="dc-panel">
+      <div class="dc-panel-head"><span class="dc-month" id="dcMonth">October 2026</span><div class="dc-month-nav"><button class="dc-iconbtn" id="dcPrev" aria-label="Previous month">←</button><button class="dc-iconbtn" id="dcNext" aria-label="Next month">→</button></div></div>
+      <div class="dc-week" aria-hidden="true"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div>
+      <div class="dc-grid" id="dcGrid" role="group" aria-label="Choose a development date"></div>
+    </div>
+    <article class="dc-panel dc-day" id="dcDay" aria-live="polite"></article>
+  </div>
+  <div class="dc-evo">
+    <div class="dc-evo-head"><div><span class="mo r">Firmware timeline</span><h3 class="dc-evo-title">Software evolution</h3></div><span class="mo">V1 → V11 / Select a version</span></div>
+    <div class="dc-strip" id="dcStrip" aria-label="Software versions"></div>
+    <div class="dc-detail" id="dcVersionDetail" aria-live="polite"></div>
+  </div>
+  <div class="dc-evo">
+    <div class="dc-evo-head"><div><span class="mo r">Project checkpoints</span><h3 class="dc-evo-title">Major milestones</h3></div><span class="mo">Select a milestone to open its date</span></div>
+    <div class="dc-milestones" id="dcMilestones"></div>
+  </div>
+</div>
+</section>
 
 <section class="fin" id="fin"><div class="stage"><canvas id="fc" aria-hidden="true"></canvas><div class="vig"></div>
 <div class="fm"><div class="l" id="f1">The world<br>doesn’t always<br>have a network.</div><div class="l s" id="f2">So we built one.</div>
 <div class="z" id="f3"><h2>Spyder Web</h2><p>When the network fails,<br>we become the network.</p><div class="ctas"><a href="#sim" class="btn p mag dn" data-enter>Enter network <i>↓</i></a><a href="#node" class="btn mag">View the engineering →</a></div></div></div></div></section>
 
-<footer><div class="wrap"><span class="logo">SPYDER WEB</span><p class="mo" style="line-height:1.9">Prototype and demonstration. Network visuals are illustrative simulations, not live data. Items marked future development or roadmap are not built. No satellite link, global coverage, guaranteed range or encryption claim is made.</p></div></footer>
+<footer><div class="wrap"><span class="logo">SPYDER WEB</span><p class="mo" style="line-height:1.9">Prototype and demonstration. Network visuals are illustrative simulations, not live data. </p></div></footer>
 
 <script>
 (()=>{
@@ -473,6 +550,105 @@ for(const i in PN){const g=mk('g',{class:'nd'+(+i===4?' on':''),transform:'trans
 dp();
 /* app webs */
 $$('.web').forEach(w=>{let s=+w.dataset.s;const r=()=>(s=s*16807%2147483647)/2147483647;const pts=[];for(let i=0;i<10;i++)pts.push([r()*100,r()*60]);pts.forEach((a,i)=>{pts.map((b,j)=>[j,Math.hypot(a[0]-b[0],a[1]-b[1])]).filter(q=>q[0]>i).sort((x,y)=>x[1]-y[1]).slice(0,1).forEach(q=>mk('line',{x1:a[0],y1:a[1],x2:pts[q[0]][0],y2:pts[q[0]][1]},w))});pts.forEach((a,i)=>mk('circle',{cx:a[0],cy:a[1],r:i===0?.9:.5,class:i===0?'r':''},w))});
+
+/* Spyder Web dated development archive */
+const DC_DAYS = [
+{d:'2026-10-15',title:'Problem identification',notes:['Identify communication problems that can arise when conventional infrastructure becomes unavailable.','Define Spyder Web as an offline communication system.','Establish the initial project scope and requirements.','Research ESP32 and ESP-NOW for local wireless communication.'],milestone:'Project problem and objective defined.'},
+{d:'2026-10-16',title:'Survey and research',notes:['Prepare a 16-question survey to understand communication needs and problems.','Research ESP-NOW and device-to-device networking.','Outline initial hardware and interface requirements.','Identify the principal challenges the project needs to address.'],milestone:'Survey preparation and technical research.'},
+{d:'2026-10-17',title:'Survey deployment',notes:['Distribute the survey and begin collecting responses.','Prepare the initial ESP32 hardware for development.','Organise the required components and development setup.','Begin preparing the initial communication implementation.'],milestone:'Survey deployment and hardware setup.'},
+{d:'2026-10-18',title:'Survey analysis',notes:['Analyse the survey responses.','Identify three project priorities: reliability, situational awareness and security.','Refine the communication-system requirements.','Use the findings to guide subsequent design and implementation.'],milestone:'Survey findings shape project priorities.'},
+{d:'2026-10-19',title:'Black Dragons website',notes:['Develop the Black Dragons website to present the project and its purpose.','Organise project information and the initial technical direction.','Present the concept and survey context.','Establish the website as the central presentation point for Spyder Web.'],milestone:'Black Dragons website development.'},
+{d:'2026-10-20',title:'V1, V2 and V3',notes:['V1 — Initial ESP-NOW text-communication baseline.','V2 — Refine message representation and handling, including the XOR-based shifting approach explored during development.','V3 — Develop sequence and packet-mapping logic for message handling.','Investigate early transmission and message-processing issues.'],milestone:'V1–V3 software evolution.'},
+{d:'2026-10-21',title:'V4 and V5',notes:['V4 — Continue developing communication logic and testing multi-node behaviour.','V5 — Continue third-node and multi-hop communication experiments.','Investigate transmission overlap and reliability challenges.','Refine communication logic based on the experiments.'],milestone:'Third-node and multi-hop experiments.'},
+{d:'2026-10-22',title:'V6 and V7',notes:['V6 — Refine firmware and message handling, including AES-128 and static-buffer approaches explored during development.','V7 — Continue improving software and communication-handling logic.','Review implementation constraints and memory handling.','Begin planning the Spyder Web presentation video during development.'],milestone:'Firmware refinement and video planning.'},
+{d:'2026-10-23',title:'V8, V9 and sensor integration',notes:['V8 — Continue interface, firmware and hardware-integration development.','V9 — Continue sensor integration and investigate system stability.','Test the GPS module and explore integration with the existing prototype.','Work with the QMC5883L digital compass.','Investigate wiring, communication and power-related problems, including decoupling where appropriate.','Continue collecting material for the presentation video.'],milestone:'GPS and digital-compass integration experiments.',caveat:'GPS has been tested; integration into the working messaging prototype is still being developed. Live GPS integration is not presented as complete.'},
+{d:'2026-10-24',title:'V10',notes:['Continue refining communication firmware.','Work on message-handling and node-related logic, including TTL and HELLO-packet approaches explored during development.','Investigate network behaviour and conduct relevant security or failure-condition experiments.','Record useful development observations.'],milestone:'V10 firmware and network-logic development.'},
+{d:'2026-10-25',title:'V11',notes:['Continue refining firmware and message-handling logic.','Explore Haversine-based distance calculations and bearing-related navigation logic.','Review progress on location and directional-awareness features.','Record software evolution and remaining integration work.'],milestone:'V11 firmware development.'},
+{d:'2026-10-26',title:'Hardware and enclosure planning',notes:['Plan the physical arrangement of the ESP32, display, joystick, GPS module, compass and power components.','Consider component placement, accessibility and organisation.','Review the physical prototype layout.','Continue planning the presentation video and identifying useful footage.'],milestone:'Hardware layout and enclosure planning.'},
+{d:'2026-10-27',title:'Prototype assembly and debugging',notes:['Work on prototype assembly and hardware organisation.','Test existing communication functionality and user interface.','Continue troubleshooting GPS integration.','Review wiring, component arrangement and the current state of the prototype.','Update the presentation plan to reflect actual development.'],milestone:'Hardware assembly and debugging.'},
+{d:'2026-10-28',title:'Development footage',notes:['Continue hardware and software integration.','Capture actual footage of the development process.','Record demonstrations of features that are genuinely working.','Organise useful visuals for the presentation video.'],milestone:'Development footage workstream.'},
+{d:'2026-10-29',title:'Video editing',notes:['Organise recorded footage.','Edit the presentation video.','Present the project problem, design approach, prototype development and working features.','Keep technical claims consistent with the actual implementation.'],milestone:'Presentation video editing.'},
+{d:'2026-10-30',title:'System refinement and testing',notes:['Continue refining the prototype.','Test the communication system and relevant hardware.','Investigate remaining technical issues.','Record observations and limitations.','Update presentation material where necessary.'],milestone:'System refinement and testing.'},
+{d:'2026-10-31',title:'Testing and exhibition preparation',notes:['Conduct repeatable tests of available prototype functionality.','Record test observations and results.','Prepare diagrams, photographs and technical explanations.','Review the project demonstration and exhibition presentation.'],milestone:'Testing and exhibition preparation.'},
+{d:'2026-11-01',title:'Final review and video completion',notes:['Review the project’s implemented features.','Make appropriate final adjustments.','Complete and review the presentation video, subject to the actual state of the project.','Organise relevant project files and demonstration material.'],milestone:'Final review and video completion.'},
+{d:'2026-11-02',title:'Documentation and final preparation',notes:['Prepare the final Spyder Web project dossier.','Include the introduction, problem statement, working principle, hardware and software architecture, diagrams, photographs and component costs.','Document prototype development history and relevant test results.','Explain current capabilities, technical limitations and possible future improvements.','Organise final exhibition and demonstration material.'],milestone:'Dossier and final exhibition preparation.'}
+];
+const DC_VERSIONS=[
+{v:'V1',d:'2026-10-20',focus:'Initial ESP-NOW text-communication baseline',notes:['Establish the initial text-communication baseline using ESP-NOW.']},
+{v:'V2',d:'2026-10-20',focus:'Message representation and XOR-based shifting',notes:['Refine message representation and handling.','Explore the XOR-based shifting approach during development.']},
+{v:'V3',d:'2026-10-20',focus:'Sequence and packet-mapping logic',notes:['Develop sequence and packet-mapping logic for message handling.']},
+{v:'V4',d:'2026-10-21',focus:'Communication logic and multi-node experiments',notes:['Continue communication-logic development.','Test multi-node behaviour.']},
+{v:'V5',d:'2026-10-21',focus:'Third-node and multi-hop experiments',notes:['Continue third-node and multi-hop communication experiments.','Investigate transmission overlap and reliability.']},
+{v:'V6',d:'2026-10-22',focus:'Firmware, AES-128 and static-buffer approaches',notes:['Refine firmware and message handling.','Explore AES-128 and static-buffer approaches; these are recorded as development approaches, not a blanket claim of completed security.']},
+{v:'V7',d:'2026-10-22',focus:'Software and communication-logic refinement',notes:['Continue improving software and communication-handling logic.']},
+{v:'V8',d:'2026-10-23',focus:'Interface and hardware integration',notes:['Continue interface, firmware and hardware-integration development.']},
+{v:'V9',d:'2026-10-23',focus:'Sensor integration and stability investigation',notes:['Continue sensor integration and investigate stability.','GPS has been tested, but integration into the working messaging prototype remains under development.','Work with the QMC5883L digital compass.']},
+{v:'V10',d:'2026-10-24',focus:'Firmware, message handling and node logic',notes:['Refine firmware and message-handling logic.','Explore TTL and HELLO-packet approaches.']},
+{v:'V11',d:'2026-10-25',focus:'Firmware and distance/bearing logic',notes:['Continue firmware refinement.','Explore Haversine-based distance calculations and bearing-related navigation logic.']}
+];
+const DC_MILESTONES=[
+['2026-10-15','Objective defined','Problem and project objective defined.'],['2026-10-16','Survey preparation','Survey preparation and technical research.'],['2026-10-17','Survey deployment','Survey distribution and initial hardware setup.'],['2026-10-18','Survey analysis','Priorities identified from survey responses.'],['2026-10-19','Website','Black Dragons website development.'],['2026-10-20','V1–V3','Initial software evolution.'],['2026-10-21','Multi-hop','Third-node and multi-hop experiments.'],['2026-10-22','Video planning','Firmware refinement and video planning.'],['2026-10-23','Sensor experiments','GPS and digital-compass integration experiments.'],['2026-10-24','V10','Firmware and network-logic development.'],['2026-10-25','V11','Firmware and distance/bearing exploration.'],['2026-10-26','Hardware layout','Hardware layout and enclosure planning.'],['2026-10-27','Assembly','Prototype assembly and debugging.'],['2026-10-28','Footage','Development footage workstream.'],['2026-10-29','Editing','Presentation video editing.'],['2026-10-30','Testing','System refinement and testing.'],['2026-10-31','Exhibition prep','Testing and exhibition preparation.'],['2026-11-01','Final review','Final review and video completion.'],['2026-11-02','Dossier','Documentation and final preparation.']
+];
+const dcByDate=new Map(DC_DAYS.map(x=>[x.d,x])),dcVersionsByDate=new Map();
+DC_VERSIONS.forEach(v=>{if(!dcVersionsByDate.has(v.d))dcVersionsByDate.set(v.d,[]);dcVersionsByDate.get(v.d).push(v)});
+let dcSelected='2026-10-27',dcMonth=new Date(2026,9,1),dcSelectedVersion='V11';
+const dcFmt=d=>new Date(d+'T12:00:00').toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'});
+const dcIsFuture=d=>d>'2026-10-27';
+function dcSelectDate(d,version){
+ if(!dcByDate.has(d))return;
+ dcSelected=d;
+ if(version)dcSelectedVersion=version;
+ dcRenderGrid();dcRenderDay();
+ if(version){dcRenderVersion();document.querySelector('#devcal .dc-version.selected')?.scrollIntoView({block:'nearest',inline:'nearest',behavior:RM?'auto':'smooth'})}
+}
+function dcRenderGrid(){
+ const grid=$('#dcGrid');grid.innerHTML='';
+ $('#dcMonth').textContent=dcMonth.toLocaleDateString('en-US',{month:'long',year:'numeric'});
+ const first=new Date(dcMonth.getFullYear(),dcMonth.getMonth(),1),offset=(first.getDay()+6)%7;
+ const total=Math.ceil((offset+new Date(dcMonth.getFullYear(),dcMonth.getMonth()+1,0).getDate())/7)*7;
+ for(let i=0;i<total;i++){
+  const dt=new Date(dcMonth.getFullYear(),dcMonth.getMonth(),1-offset+i),key=dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');
+  const valid=dcByDate.has(key),b=document.createElement('button');b.type='button';b.className='dc-date'+(valid?' has':' outside')+(key===dcSelected?' selected':'');b.disabled=!valid;b.setAttribute('aria-label',valid?dcFmt(key):key);if(key===dcSelected)b.setAttribute('aria-pressed','true');
+  const n=document.createElement('span');n.className='num';n.textContent=dt.getDate();b.appendChild(n);
+  const vs=dcVersionsByDate.get(key)||[];
+  if(valid&&vs.length){const vc=document.createElement('span');vc.className='vcount';vc.textContent=vs.map(v=>v.v).join('·');b.appendChild(vc)}
+  if(valid){const dot=document.createElement('i');dot.className='mark';dot.setAttribute('aria-hidden','true');b.appendChild(dot);b.onclick=()=>{dcSelectedVersion=(dcVersionsByDate.get(key)||[]).slice(-1)[0]?.v||dcSelectedVersion;dcSelectDate(key);if(dcVersionsByDate.has(key))dcRenderVersion()}}
+  grid.appendChild(b);
+ }
+ $('#dcPrev').disabled=dcMonth.getFullYear()===2026&&dcMonth.getMonth()===9;
+ $('#dcNext').disabled=dcMonth.getFullYear()===2026&&dcMonth.getMonth()===10;
+}
+function dcRenderDay(){
+ const x=dcByDate.get(dcSelected),day=$('#dcDay');day.innerHTML='';
+ const tag=document.createElement('span');tag.className='mo r';tag.textContent=dcFmt(x.d);day.appendChild(tag);
+ const h=document.createElement('h3');h.textContent=x.title;day.appendChild(h);
+ const ul=document.createElement('ul');x.notes.forEach(note=>{const li=document.createElement('li');li.textContent=note;ul.appendChild(li)});day.appendChild(ul);
+ const ms=document.createElement('div');ms.className='dc-milestone';ms.textContent='◆ '+x.milestone;day.appendChild(ms);
+ if(x.caveat){const c=document.createElement('p');c.className='dc-future';c.textContent=x.caveat;day.appendChild(c)}
+ if(dcIsFuture(x.d)){const f=document.createElement('p');f.className='dc-future';f.textContent='Scheduled entry · future-dated relative to 27 October 2026. No completion is implied.';day.appendChild(f)}
+ const vs=dcVersionsByDate.get(x.d)||[];
+ if(vs.length){const f=document.createElement('p');f.className='dc-future';f.textContent='SOFTWARE VERSIONS · '+vs.map(v=>v.v).join(' / ');day.appendChild(f)}
+}
+function dcRenderVersion(){
+ const strip=$('#dcStrip');strip.innerHTML='';
+ DC_VERSIONS.forEach(v=>{const b=document.createElement('button');b.type='button';b.className='dc-version'+(v.v===dcSelectedVersion?' selected':'');b.setAttribute('aria-pressed',v.v===dcSelectedVersion?'true':'false');
+ const strong=document.createElement('strong');strong.textContent=v.v;b.appendChild(strong);
+ const date=document.createElement('span');date.textContent=new Date(v.d+'T12:00:00').toLocaleDateString('en-GB',{day:'2-digit',month:'short'});b.appendChild(date);
+ const small=document.createElement('small');small.textContent=v.focus;b.appendChild(small);
+ b.onclick=()=>{dcSelectedVersion=v.v;dcMonth=new Date(+v.d.slice(0,4),+v.d.slice(5,7)-1,1);dcSelectDate(v.d,v.v);};strip.appendChild(b);
+ });
+ const v=DC_VERSIONS.find(q=>q.v===dcSelectedVersion)||DC_VERSIONS[0],detail=$('#dcVersionDetail');detail.innerHTML='';
+ const left=document.createElement('div'),h=document.createElement('h4');h.textContent=v.v;left.appendChild(h);const date=document.createElement('span');date.className='mo r';date.textContent=dcFmt(v.d);left.appendChild(date);detail.appendChild(left);
+ const right=document.createElement('div'),p=document.createElement('p');p.textContent=v.focus;right.appendChild(p);const ul=document.createElement('ul');v.notes.forEach(n=>{const li=document.createElement('li');li.textContent=n;ul.appendChild(li)});right.appendChild(ul);
+ const go=document.createElement('button');go.type='button';go.className='btn';go.style.marginTop='1rem';go.textContent='Open calendar date →';go.onclick=()=>{dcMonth=new Date(+v.d.slice(0,4),+v.d.slice(5,7)-1,1);dcSelectDate(v.d,v.v);$('#dcDay').scrollIntoView({block:'nearest',behavior:RM?'auto':'smooth'})};right.appendChild(go);detail.appendChild(right);
+}
+function dcRenderMilestones(){
+ const root=$('#dcMilestones');DC_MILESTONES.forEach(m=>{const b=document.createElement('button');b.type='button';b.className='dc-ms';const time=document.createElement('time');time.textContent=new Date(m[0]+'T12:00:00').toLocaleDateString('en-GB',{day:'2-digit',month:'short'});b.appendChild(time);const strong=document.createElement('strong');strong.textContent=m[1];b.appendChild(strong);const span=document.createElement('span');span.textContent=m[2];b.appendChild(span);b.onclick=()=>{dcMonth=new Date(+m[0].slice(0,4),+m[0].slice(5,7)-1,1);dcSelectDate(m[0]);$('#dcDay').scrollIntoView({block:'nearest',behavior:RM?'auto':'smooth'})};root.appendChild(b)});
+}
+$('#dcPrev').addEventListener('click',()=>{dcMonth=new Date(dcMonth.getFullYear(),dcMonth.getMonth()-1,1);dcRenderGrid()});
+$('#dcNext').addEventListener('click',()=>{dcMonth=new Date(dcMonth.getFullYear(),dcMonth.getMonth()+1,1);dcRenderGrid()});
+dcRenderGrid();dcRenderDay();dcRenderVersion();dcRenderMilestones();
+
 /* enter network */
 $$('[data-enter]').forEach(a=>a.onclick=e=>{e.preventDefault();ham.classList.remove('x');mm.classList.remove('o');$('#sim').scrollIntoView({behavior:RM?'auto':'smooth'});const bx=$('#ss').parentElement;setTimeout(()=>{bx.classList.add('fl2');setTimeout(()=>bx.classList.remove('fl2'),1600)},RM?0:900)});
 /* magnetic */
